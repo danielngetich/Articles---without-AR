@@ -1,4 +1,3 @@
-# Please copy/paste all three classes into this file to submit your solution!
 require "pry"
 class Article
     attr_accessor :author, :magazine, :title
@@ -15,18 +14,13 @@ class Article
     end
 
     class Author<Article
-        attr_accessor :name,:articles,:magazine
-        def initialize 
+        def initialize name
           @name=name
-          @articles=@@all
-          @magazine=magazine
-
         end
-        
     end
         
     class Magazine<Article
-            @@all=[]
+        @@all=[]
           attr_accessor :name,:category
           def initialize(name,category)
                @name=name
@@ -34,7 +28,7 @@ class Article
                @@all<<self
           end
           def self.all
-          @@all
+            @@all
           end
     end
 binding.pry
