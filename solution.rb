@@ -34,9 +34,9 @@ class Author
     def topic_areas
       magazines.map{|magazine|magazine.category}.uniq
     end
-  end
+end
         
-  class Magazine
+class Magazine
     @@all=[]
       attr_accessor :name,:category
       def initialize(name,category)
@@ -52,4 +52,4 @@ class Author
         article.magazine.name==@name}
         .map{|article|article.author}.uniq
       end
-  end
+end
